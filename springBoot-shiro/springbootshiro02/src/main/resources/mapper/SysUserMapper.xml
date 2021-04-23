@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xia.springbootshiro02.mapper.SysUserMapper" >
+    <sql id="BASE_TABLE">
+        sysuser
+    </sql>
+
+<!--    <sql id="BASE_COLUMN">-->
+<!--        id,username,password-->
+<!--    </sql>-->
+
+    <select id="findByusername" parameterType="String"  resultType="com.xia.springbootshiro02.pojo.SysUser">
+        select * from sysuser where username=#{username}
+<!--        SELECT        *-->
+<!--        FROM-->
+<!--        <include refid="BASE_TABLE"/>-->
+<!--        <where>-->
+<!--            <if test="username != null">-->
+<!--                AND username = #{username, jdbcType=VARCHAR}-->
+<!--            </if>-->
+<!--        </where>-->
+    </select>
+
+
+</mapper>
